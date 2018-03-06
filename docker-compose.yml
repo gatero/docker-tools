@@ -1,0 +1,29 @@
+version: '3.5'
+services:
+  app:
+    image: "${APP_IMAGE}"
+    container_name: "${APP_CONTAINER}"
+    depends_on:
+      - db
+    env_file:
+      - .env
+    environment:
+      VIRTUAL_HOST: "${APP_CONTAINER}"
+    expose:
+      - "${APP_PORT}"
+    volumes:
+      - "${APP_VOLUME}"
+  db:
+    image: ${DB_IMAGE}
+    container_name: "${DB_CONTAINER}"
+    env_file:
+      - .env
+    environment:
+      VIRTUAL_HOST: "${DB_CONTAINER}"
+    expose:
+      - "${DB_PORT}"
+    volumes:
+      - "${DB_VOLUME}"
+networks:
+  default:
+    name: "${NETWORK}"
