@@ -22,7 +22,7 @@ if docker ps -a | awk '{print $NF}' | grep -w "$APP_CONTAINER" > /dev/null 2>&1;
       yarn "$@"
     docker exec \
       "$APP_CONTAINER" \
-      chown -R "$(id -u)":"$(id -g)" node_modules package.json yarn.lock
+      #chown -R "$(id -u)":"$(id -g)" node_modules package.json yarn.lock
   else
     echo -e "${RED}Unrecognized command: ${NC}$1"
   fi

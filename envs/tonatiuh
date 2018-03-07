@@ -1,0 +1,14 @@
+APP_CONTAINER=tonatiuh
+APP_IMAGE=node:8.9.4
+APP_PORT=50051
+APP_VOLUME=.:/usr/src/app
+APP_WORKING_DIR=/usr/src/app
+
+DB_CONTAINER=tonatiuhDB
+DB_HOST=tonatiuhDB
+DB_IMAGE=mongo:3.6.3
+DB_PORT=27017
+
+NETWORK=cc
+
+NODE_ENV=development
