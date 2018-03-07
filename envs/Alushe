@@ -1,0 +1,17 @@
+APP_IMAGE=node:8.10.0
+APP_CONTAINER=dev.alushe.app.culturacolectiva.com
+APP_VOLUME=.:/app
+APP_PORT=3000
+
+DB_IMAGE=mongo:3.6.3
+DB_CONTAINER=dev.alushe.db.culturacolectiva.com
+DB_VOLUME=./data/db:/data/db
+DB_PORT=27017
+
+MONGO_ADMIN_USER=root
+MONGO_ADMIN_PASS=root_password
+MONGO_APPLICATION_DATABASE=users
+MONGO_APPLICATION_USER=app_root
+MONGO_APPLICATION_PASS=app_password
+
+NETWORK=cc
