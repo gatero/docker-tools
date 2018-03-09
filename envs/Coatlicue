@@ -1,17 +1,16 @@
 APP_IMAGE=pitakill/cc-golang:0.0.1
-APP_CONTAINER=dev.coatlicue.app.culturacolectiva.com
+APP_CONTAINER=coatlicue
 APP_VOLUME=.:/go/src/app
-APP_PORT=3000
+APP_PORT=50051
 
-DB_IMAGE=mongo:3.6.3
-DB_CONTAINER=dev.coatlicue.db.culturacolectiva.com
-DB_VOLUME=./data/db:/data/db
+DB_CONTAINER=coatlicueDB
+DB_HOST=coatlicueDB
+DB_IMAGE=pitakill/cc-mongo:0.0.1
 DB_PORT=27017
 
-MONGO_ADMIN_USER=root
-MONGO_ADMIN_PASS=root_password
-MONGO_APPLICATION_DATABASE=users
-MONGO_APPLICATION_USER=app_root
-MONGO_APPLICATION_PASS=app_password
+AUTH=yes
+MONGO_INITDB_ROOT_USERNAME=root
+MONGO_INITDB_ROOT_PASSWORD=root
+MONGO_DATABASE=coatlicue
 
 NETWORK=cc
