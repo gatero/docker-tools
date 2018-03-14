@@ -22,8 +22,6 @@ services:
       VIRTUAL_HOST: "${DB_CONTAINER}"
     expose:
       - "${DB_PORT}"
-    volumes:
-      - "${DB_VOLUME}"
 networks:
   default:
     name: "${NETWORK}"
