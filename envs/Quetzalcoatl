@@ -1,4 +1,4 @@
-APP_CONTAINER=quetzalcoalt
+APP_CONTAINER=quetzalcoatl
 APP_IMAGE=pitakill/cc-golang:0.0.1
 APP_PORT=50051
 APP_VOLUME=.:/go/src/app
