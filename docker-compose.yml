@@ -9,6 +9,8 @@ services:
       - .env
     environment:
       VIRTUAL_HOST: "${APP_CONTAINER}"
+    ports:
+      - "${APP_PORT}:${APP_PORT}"
     expose:
       - "${APP_PORT}"
     volumes:
