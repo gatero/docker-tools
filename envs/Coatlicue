@@ -1,5 +1,5 @@
 APP_IMAGE=pitakill/cc-golang:0.0.1
-APP_CONTAINER=coatlicue
+APP_CONTAINER=dev.api.culturacolectiva.com
 APP_VOLUME=.:/go/src/app
 APP_PORT=50051
 
